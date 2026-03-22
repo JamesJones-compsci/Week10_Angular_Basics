@@ -45,6 +45,17 @@
   <section class="card">    
     <h2>Currency Pipe Examples</h2> 
 
+    <ul>
+      <li>Default : {{ amount }}</li>
+      <li>Currency : {{ amount | currency }}</li>
+      <li>USD: {{ amount | currency:'USD' : 'code' }}</li>
+      <li>EUR: {{ amount | currency:'EUR' }}</li>
+      <li>GBP: {{ amount | currency:'GBP' }}</li>
+      <li>AER: {{ amount | currency:'AER' }}</li>
+      <li>JPY: {{ amount | currency:'JPY' }}</li>
+      <li>INR: {{ amount | currency:'INR' }}</li>
+      <li>CAD (narrow symbol): {{ amount | currency:'CAD' : 'symbol-narrow' }}</li>
+    </ul> 
 
      
   </section>
@@ -52,6 +63,13 @@
   <section class="card">    
     <h2>Number Pipe Examples</h2> 
 
+    <ul>
+      <li>Default : {{ amount }}</li>
+      <li>2 decimal places : {{ 12.93836 | number:'1.2-2' }}</li>
+      <li>minimum 3 integer digits: {{ 12.93836 | number:'3.0-0' }}</li> 
+      <li>Percentage: {{ 15.89 | percent }}</li>
+      <li>Percentage: {{ 0.1589 | percent }}</li>
+    </ul> 
 
      
   </section>
