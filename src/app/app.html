@@ -74,9 +74,16 @@
      
   </section>
 
-  <!-- <section class="card">    
-    <h2>Event Binding</h2> 
+  <section class="card">    
+    <h2>Nested / Child Component - Product</h2> 
+
+    <p>Product component without data supplied</p>
+      <app-product></app-product>
+
+    <!-- Property Binding -->   
+    <p>Product component with data supplied</p>
+      <app-product [product] = "productInfo"></app-product>  
     
-  </section> -->
+  </section> 
 
 </div>

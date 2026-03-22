@@ -4,9 +4,12 @@ import { RouterOutlet } from '@angular/router';
 // CommonModule to support directives and pipes
 import { CommonModule } from '@angular/common';
 
+// import any child components
+import { Product } from './product/product';
+
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, CommonModule],
+  imports: [RouterOutlet, CommonModule, Product],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
@@ -16,7 +19,7 @@ export class App {
   protected studentID = "100898394";
   protected myName = "James Jones";
 
-  greetButtonClicked() {
+  greetButtonClicked() : void {
     alert(`Hello from ${this.myName} with student ID ${this.studentID}`); 
   }
 
@@ -25,7 +28,14 @@ export class App {
   protected today : Date = new Date();
   protected amount = 1234567.98
 
-  
+  // Product info to supply to the product component
+  protected productInfo = {
+    id: 101,
+    name: "Headphones",
+    category: "Electronics",
+    price: 79.99,
+    inStock: true
+  }
 
 
 }
